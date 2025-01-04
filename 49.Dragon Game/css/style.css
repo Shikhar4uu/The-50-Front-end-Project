@@ -32,19 +32,19 @@ body {
 }
 
 .dinoActive {
-    animation: animateDino 0.5s linear infinite;
+    animation: animateDino 0.6s linear infinite;
 }
 
 @keyframes animateDino {
 
     0%,
     100% {
-        bottom: 28px;
+        bottom: 38px;
     }
 
     45%,
     55% {
-        bottom: 160px;
+        bottom: 200px;
     }
 }
 
@@ -62,7 +62,7 @@ body {
 }
 
 .blockActive {
-    animation: blockAnimate 1s linear infinite;
+    animation: blockAnimate 2s linear infinite;
 }
 
 @keyframes blockAnimate {

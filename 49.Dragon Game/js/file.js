@@ -5,10 +5,12 @@ let road = document.querySelector("#road");
 let cloud = document.querySelector("#cloud");
 let score = document.querySelector("#score");
 let gameOver = document.querySelector("#gameOver");
+let highScore = document.querySelector("#highScore");
 
 //declaring variable for score
 let interval = null;
 let playerScore = 0;
+let myHighestScore = 0;
 
 
 //function for score
@@ -60,6 +62,7 @@ let result = setInterval(() => {
     if (dinoBottom <= 90 && blockLeft >= 20 && blockLeft <= 145) {
         //        console.log("Game Over");
 
+        highestScore(playerScore);
         gameOver.style.display = "block";
         block.classList.remove("blockActive");
         road.firstElementChild.style.animation = "none";
@@ -68,3 +71,15 @@ let result = setInterval(() => {
         playerScore = 0;
     }
 }, 10);
+
+
+
+function highestScore(Score){
+    if (Score>myHighestScore ){
+        myHighestScore = Score;
+        return highScore.innerHTML = `My-Highest-Score => <b>${Score}</b>`;
+
+         
+    }
+
+}
